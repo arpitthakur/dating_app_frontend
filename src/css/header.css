@@ -1,0 +1,51 @@
+
+body{
+    background-image: url("../bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+     
+     /* background-color: aqua; */
+}
+.height{
+    height: 114px;
+}
+img{
+    margin-top: -165px;
+    margin-left: -100px;
+
+}
+#slide{
+    height: 100%;
+    right: 0;
+    top:0;
+    margin-top: 114px;
+    background-color: white;
+}
+
+.bg{
+    height: 117px;
+    font-style: oblique;
+}
+input{
+    width: 300px;
+    border: none;
+background-color: transparent;
+resize: none;
+outline: none;
+border-bottom:  1px solid black;
+}
+.sel{
+    width: 300px;
+}
+.sell{
+    width: 134px;
+}
+.but{
+    width: 100px;
+}
+.toggle{
+    text-align: right;
+}
+.icon{
+    font-size: 40px;
+}
