@@ -9,12 +9,20 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [age,setAge] = useState("")
   const [gender,setGender] = useState("")
+  // const[err,setErr]=useState(false)
 
+  
   const handleclick = async () => {
-    if (!email && !name && !password) {
-      alert("name,email and pasword is required");
+    // console.log(name)
+    // if(name.length>3){
+    //   setErr(true)
+    // }
+
+    if (!email || !name || !password||!age||!gender) {
+      alert("All field are required");
       return;
-    } else {
+     }
+     else {
       alert("Signup successfully");
     await fetch("http://localhost:8000/signup", {
       method: "POST",
@@ -28,21 +36,28 @@ function Signup() {
       }),
     }).then(navigate("/login")).catch();
   }
+  
   };
   return (
     <>
     <Header profileIcon={false}/>
+    <form>
     <div className="form input">
     <h1 className="h1">Signup</h1>
       <input
         type="text"
-        value={name}
+        value={name} 
+        required
         onChange={(e) => setName(e.target.value)}
         placeholder="Enter your name"
       ></input>
+      {/* {
+        err?<span>required</span>:""
+      } */}
       <input
         type="text"
         value={email}
+        required
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
       ></input>
@@ -50,16 +65,19 @@ function Signup() {
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        required
         placeholder="Enter your password"
       ></input>
       <input
         type="number"
         value={age}
         onChange={(e) => setAge(e.target.value)}
+        required
         placeholder="Enter your age"
       ></input>
        <input
         type="text"
+        required
         value={gender}
         onChange={(e) => setGender(e.target.value)}
         placeholder="Gender"
@@ -67,6 +85,7 @@ function Signup() {
       <button className="btn btn-dark" onClick={handleclick}><b>Signup</b></button>
       <p><b>Already have an account ?   <a href="http://localhost:3000/login">Login</a></b></p>
     </div>
+    </form>
     </>
   );
 }

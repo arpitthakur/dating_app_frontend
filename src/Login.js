@@ -12,7 +12,7 @@ function Login() {
   
 
   const handleLogin = async () => {
-    if (!email && !password) {
+    if (!email || !password) {
       alert("email and pasword is required");
       return;
     } else {
@@ -45,12 +45,14 @@ function Login() {
   return (
     <>
     <Header profileIcon={false}/>
+    <form>
     <div className="container">
    
       <div className="form input">
         <h1 className="h1">Login</h1>
         <input
           type="email"
+          required
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -60,6 +62,7 @@ function Login() {
           type="password"
           placeholder="Password"
           value={password}
+          required
           onChange={(e) => setPassword(e.target.value)}
         ></input>
         <button className="btn btn-dark butt" onClick={handleLogin}><b>Log In</b></button>
@@ -70,7 +73,7 @@ function Login() {
       </div>
       
       
-    </div></>
+    </div></form></>
   );
 }
 
