@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import '../src/css/header.css'
+import Header from './Header';
 import { useNavigate } from "react-router-dom";
 function Signup() {
   let navigate = useNavigate();
@@ -28,8 +30,10 @@ function Signup() {
   }
   };
   return (
-    <div className="form">
-    <h1>Signup</h1>
+    <>
+    <Header/>
+    <div className="form input">
+    <h1 className="h1">Signup</h1>
       <input
         type="text"
         value={name}
@@ -60,9 +64,10 @@ function Signup() {
         onChange={(e) => setGender(e.target.value)}
         placeholder="Gender"
       ></input>
-      <button onClick={handleclick}>Signup</button>
-      
+      <button className="btn btn-dark" onClick={handleclick}><b>Signup</b></button>
+      <p><b>Already have an account ?   <a href="http://localhost:3000/login">Login</a></b></p>
     </div>
+    </>
   );
 }
 
