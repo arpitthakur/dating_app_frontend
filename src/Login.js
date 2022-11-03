@@ -37,16 +37,14 @@ function Login() {
       setMsg(val.message);
       setTimeout(() => {
         setMsg();
-      }, 3000)
-      .then(navigate("/home"))
-    })
-      .catch();
+      }, 3000)  
+    }).then(navigate("/dashboard")).catch();
   
   };}
 
   return (
     <>
-    <Header/>
+    <Header profileIcon={false}/>
     <div className="container">
    
       <div className="form input">

@@ -10,7 +10,7 @@ function App() {
     
         <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Header />} />
+        <Route path="/dashboard" element={<Header profileIcon={true} />} />
         
         
         

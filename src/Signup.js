@@ -31,7 +31,7 @@ function Signup() {
   };
   return (
     <>
-    <Header/>
+    <Header profileIcon={false}/>
     <div className="form input">
     <h1 className="h1">Signup</h1>
       <input
