@@ -9,18 +9,16 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [age,setAge] = useState("")
   const [gender,setGender] = useState("")
-  // const[err,setErr]=useState(false)
-
+  
+  const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
   
   const handleclick = async () => {
-    // console.log(name)
-    // if(name.length>3){
-    //   setErr(true)
-    // }
+    
 
     if (!email || !name || !password||!age||!gender) {
-      alert("All field are required");
-      return;
+     if(emailRegex.test(email)){
+      alert("correct")
+     }
      }
      else {
       alert("Signup successfully");
@@ -51,9 +49,7 @@ function Signup() {
         onChange={(e) => setName(e.target.value)}
         placeholder="Enter your name"
       ></input>
-      {/* {
-        err?<span>required</span>:""
-      } */}
+      
       <input
         type="text"
         value={email}
