@@ -30,7 +30,7 @@ const LoginForm = ()=> {
     
   }
   const clickform=()=>{
-    alert("click")
+    alert("click" )
     }
   
 
@@ -48,11 +48,15 @@ const LoginForm = ()=> {
           placeholder="Name"
           name="Name"
           value={form.Name}
+          id="name"
           required
           onChange={onUpdateField}
           
         />
-      </div><i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
+      </div>
+     <label htmlFor="name" >
+      <i class="fa-solid fa-pen-to-square pen"></i>
+     </label>
       </div>
       <div className="full">
       <div className="formGroup">
@@ -63,11 +67,14 @@ const LoginForm = ()=> {
           placeholder="Email"
           name="Email"
           required
+          id="email"
           value={form.Email}
           onChange={onUpdateField}
         />
         </div>
+        <label htmlFor="email" >
         <i class="fa-solid fa-pen-to-square pen"></i>
+        </label>
       </div>
       <div className="full">
 
@@ -79,26 +86,32 @@ const LoginForm = ()=> {
           placeholder="Age"
           name="Age"
           required
+          id="age"
           value={form.Age}
           onChange={onUpdateField}
         />
       </div>
-      <i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
+      <label htmlFor="age" >
+      <i class="fa-solid fa-pen-to-square pen"></i>
+      </label>
       </div>
 <div className="full">
       
         <select  className="formField select"
           type="text"
           required
-          value={form.Gender}
+          // value={form.Gender}
+          id="gender"
+          
           onChange={onUpdateField}>
           <option>Gender</option>
           <option>female</option>
           <option>male</option>
 
         </select>
-        <i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
-      
+        <label htmlFor="gender" >
+        <i class="fa-solid fa-pen-to-square pen"></i>
+      </label>
       
         {/* <input
           className="formField"
@@ -113,7 +126,8 @@ const LoginForm = ()=> {
       <div classname ="full"> 
    
         <select className="formField select"   
-          value={form.State}
+          // value={form.State}
+          id="state"
           onChange={onUpdateField}>
           <option>State</option>
           <option>haryana</option>
@@ -126,7 +140,9 @@ const LoginForm = ()=> {
           <option>bihar</option>
           <option>sikkim</option>
         </select>
-        <i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
+        <label htmlFor="state" >
+        <i class="fa-solid fa-pen-to-square pen" ></i>
+        </label>
  
       
 {/*         
