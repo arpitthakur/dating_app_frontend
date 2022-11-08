@@ -7,6 +7,7 @@ body{
 }.full{
   display: flex;
 }
+
 .pen{
   font-size: 25px;
 }

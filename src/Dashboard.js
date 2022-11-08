@@ -14,8 +14,6 @@ const LoginForm = ()=> {
 
   const onUpdateField = e => {
 
-
-    
     const nextFormState = {
       ...form,
       [e.target.name]: e.target.value,
@@ -31,7 +29,9 @@ const LoginForm = ()=> {
     }
     
   }
-
+  const clickform=()=>{
+    alert("click")
+    }
   
 
   return (
@@ -52,7 +52,7 @@ const LoginForm = ()=> {
           onChange={onUpdateField}
           
         />
-      </div><i class="fa-solid fa-pen-to-square pen"></i>
+      </div><i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
       </div>
       <div className="full">
       <div className="formGroup">
@@ -83,15 +83,13 @@ const LoginForm = ()=> {
           onChange={onUpdateField}
         />
       </div>
-      <i class="fa-solid fa-pen-to-square pen"></i>
+      <i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
       </div>
 <div className="full">
-      <div className="formGroup">
+      
         <select  className="formField select"
           type="text"
-          // placeholder="Gender"
           required
-          // name="Gender"
           value={form.Gender}
           onChange={onUpdateField}>
           <option>Gender</option>
@@ -99,8 +97,8 @@ const LoginForm = ()=> {
           <option>male</option>
 
         </select>
-        <i class="fa-solid fa-pen-to-square pen"></i>
-      </div>
+        <i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
+      
       
         {/* <input
           className="formField"
@@ -112,8 +110,11 @@ const LoginForm = ()=> {
           onChange={onUpdateField}
         /> */}
       </div>
-      <div className="formGroup ">
-        <select className="formField select">
+      <div classname ="full"> 
+   
+        <select className="formField select"   
+          value={form.State}
+          onChange={onUpdateField}>
           <option>State</option>
           <option>haryana</option>
           <option>punjab</option> 
@@ -125,6 +126,9 @@ const LoginForm = ()=> {
           <option>bihar</option>
           <option>sikkim</option>
         </select>
+        <i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
+ 
+      
 {/*         
         <input
           className="formField"
