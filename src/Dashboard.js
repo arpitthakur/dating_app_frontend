@@ -14,8 +14,6 @@ const LoginForm = ()=> {
 
   const onUpdateField = e => {
 
-
-    
     const nextFormState = {
       ...form,
       [e.target.name]: e.target.value,
@@ -31,19 +29,17 @@ const LoginForm = ()=> {
     }
     
   }
-
-  const onSubmitForm = e => {
-    e.preventDefault();
-   
-    // alert(JSON.stringify(form, null, 2));
-   
-  };
+  const clickform=()=>{
+    alert("click")
+    }
+  
 
   return (
     <div className="container">
 
-    <form className="form input" onSubmit={onSubmitForm}>
+    <form className="form input" >
     <h1 className="text-dark h1 "><i class="fa-solid fa-user m-3"></i>Profile Setting</h1>
+     <div className="full">
       <div className="formGroup">
  
         <input
@@ -56,7 +52,9 @@ const LoginForm = ()=> {
           onChange={onUpdateField}
           
         />
+      </div><i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
       </div>
+      <div className="full">
       <div className="formGroup">
        
         <input
@@ -69,6 +67,9 @@ const LoginForm = ()=> {
           onChange={onUpdateField}
         />
         </div>
+        <i class="fa-solid fa-pen-to-square pen"></i>
+      </div>
+      <div className="full">
 
       <div className="formGroup">
        
@@ -82,10 +83,24 @@ const LoginForm = ()=> {
           onChange={onUpdateField}
         />
       </div>
-
-      <div className="formGroup">
+      <i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
+      </div>
+<div className="full">
       
-        <input
+        <select  className="formField select"
+          type="text"
+          required
+          value={form.Gender}
+          onChange={onUpdateField}>
+          <option>Gender</option>
+          <option>female</option>
+          <option>male</option>
+
+        </select>
+        <i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
+      
+      
+        {/* <input
           className="formField"
           type="text"
           placeholder="Gender"
@@ -93,10 +108,28 @@ const LoginForm = ()=> {
           name="Gender"
           value={form.Gender}
           onChange={onUpdateField}
-        />
+        /> */}
       </div>
-      <div className="formGroup">
-        
+      <div classname ="full"> 
+   
+        <select className="formField select"   
+          value={form.State}
+          onChange={onUpdateField}>
+          <option>State</option>
+          <option>haryana</option>
+          <option>punjab</option> 
+          <option>himachal</option>
+          <option>goa</option>
+          <option>uttar pardesh</option>
+          <option>utrakhand</option> 
+          <option>kerala</option>
+          <option>bihar</option>
+          <option>sikkim</option>
+        </select>
+        <i class="fa-solid fa-pen-to-square pen" onClick={clickform}></i>
+ 
+      
+{/*         
         <input
           className="formField"
           type="text"
@@ -105,7 +138,7 @@ const LoginForm = ()=> {
           name="State"
           value={form.State}
           onChange={onUpdateField}
-        />
+        /> */}
       </div>
       <div className="formActions">
         <button className="formSubmitBtn text-white bg-dark" onClick={handleLogin}
