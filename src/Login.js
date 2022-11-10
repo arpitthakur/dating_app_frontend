@@ -30,9 +30,9 @@ function Login() {
    
 
     else {
-      alert("Login successfully");
+     
 
-      await fetch("http://localhost:8000/logIn", {
+      await fetch("http://localhost:9000/logIn", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,15 +44,33 @@ function Login() {
           password,
         }),
       })
-        .then((res) => res.json())
-        .then((val) => {
-          setEmail("");
-          setPassword("")
-          setMsg(val.message);
+        
+        .then(async(res) => {
+        let data=await  res.json()
+          console.log(data)
+          if(data.success){
+
+            setEmail("");
+            setPassword("")
+            setMsg("Login Successfully");
+            setTimeout(() => {
+              setMsg();
+            }, 3000)
+            navigate("/dashboard")
+          }else{
+            setMsg("Invalid username or password")
           setTimeout(() => {
             setMsg();
           }, 3000)
-        }).then(navigate("/dashboard")).catch();
+          }
+        })
+        .catch((e)=>{
+          console.log(e)
+          setMsg("Invalid username or password")
+          setTimeout(() => {
+            setMsg();
+          }, 3000)
+        });
 
     };
   }
@@ -61,11 +79,11 @@ function Login() {
   return (
     <>
       <Header profileIcon={false} />
-      <form>
         <div className="container">
 
           <div className="form input">
             <h1 className="h1">Login</h1>
+            <span>{msg}</span>
             <input
               type="email"
               required
@@ -87,11 +105,11 @@ function Login() {
             <p><b>Don't have an account ?   <a href="http://localhost:3000/">Sign up</a></b></p>
           </div>
           <div className="msg">
-            <h1>{msg}</h1>
           </div>
 
 
-        </div></form></>
+        </div>
+        </>
   );
 }
 
