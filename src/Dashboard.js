@@ -11,6 +11,7 @@ const LoginForm = ()=> {
     Gender:"",
     State: "",
   });
+const[savedata,setSavedata]=useState()
 
   const onUpdateField = e => {
 
@@ -19,14 +20,22 @@ const LoginForm = ()=> {
       [e.target.name]: e.target.value,
     };
     setForm(nextFormState);
+    // console.log('form',form)
   };
 
-  const handleLogin=()=>{
-    if(!form.Name||!form.Age||!form.Email||!form.State||!form.Gender){
-      alert("All fields are required ")
-    }else{
-      alert("submit")
-    }
+  const handleLogin=(e)=>{
+    // if(!form.Name||!form.Age||!form.Email||form.value){
+    //   alert("All fields are required ")
+    // }else{
+    //   alert("submit")
+      
+      
+    // }
+    e.preventDefault()
+    
+    console.log('form',form)
+    console.log(savedata)
+  setSavedata(form)
     
   }
   const clickform=()=>{
@@ -100,7 +109,7 @@ const LoginForm = ()=> {
         <select  className="formField select"
           type="text"
           required
-          // value={form.Gender}
+          value={form.value}
           id="gender"
           
           onChange={onUpdateField}>
@@ -126,7 +135,7 @@ const LoginForm = ()=> {
       <div classname ="full"> 
    
         <select className="formField select"   
-          // value={form.State}
+          value={form.value}
           id="state"
           onChange={onUpdateField}>
           <option>State</option>
