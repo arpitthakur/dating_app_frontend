@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../src/css/header.css'
 import Dashboard from '../src/Dashboard'
+import Layout from './AdminLayout'
 
 
 const Header = (props) => {
@@ -30,7 +31,8 @@ const Header = (props) => {
             </>
           }
           {
-        show?  <Dashboard/>:null}
+            <Layoutx/>
+        }
 
         </div>
       </div>

@@ -1,14 +1,25 @@
-body{
+.bg_images{
     background-image: url("../bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 40px 0;
      
-
-
-
-    
    
-}.full{
+}
+.bg_images3{
+  background-image: url("../bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9px 0;
+}
+.bg_images2{
+  background-image: url("../bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9px 0;
+
+}
+.full{
   display: flex;
 }
 

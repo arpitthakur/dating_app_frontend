@@ -39,6 +39,7 @@ function Signup() {
   return (
     <>
     <Header profileIcon={false}/>
+    <div className="bg_images2">
     <form>
     <div className="form input">
     <h1 className="h1">Signup</h1>
@@ -82,6 +83,7 @@ function Signup() {
       <p><b>Already have an account ?   <a href="http://localhost:3000/login">Login</a></b></p>
     </div>
     </form>
+    </div>
     </>
   );
 }

@@ -61,6 +61,7 @@ function Login() {
   return (
     <>
       <Header profileIcon={false} />
+      <div className="bg_images">
       <form>
         <div className="container">
 
@@ -91,7 +92,7 @@ function Login() {
           </div>
 
 
-        </div></form></>
+        </div></form></div></>
   );
 }
 
