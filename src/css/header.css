@@ -1,51 +1,120 @@
-
 body{
     background-image: url("../bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
      
-     /* background-color: aqua; */
+   
+}.full{
+  display: flex;
 }
-.height{
-    height: 114px;
+
+.pen{
+  font-size: 25px;
 }
+
+.select{
+  width: 209px;
+
+border: none;
+padding: 4px;
+border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo{
+    margin-top: -45px !important;
+    }
+  }
+  @media screen and (max-width: 770px) {
+    .logo{
+    margin-top: -26px !important;
+    }
+   
+  }
+  @media screen and (max-width: 320px) {
+    .logo{
+    margin-top: -75px !important;
+    }
+    .icon{
+        margin-top: -139px !important;
+    }
+  }
+  .logo{
+    margin-top: -79px;
+}
+
 img{
-    margin-top: -165px;
-    margin-left: -100px;
-
-}
-#slide{
     height: 100%;
-    right: 0;
-    top:0;
-    margin-top: 114px;
+    width: 100%;
+}
+img.img {
+    height: 50px;
+    width: 50px;
+}
+.head{
     background-color: white;
-}
-
-.bg{
-    height: 117px;
-    font-style: oblique;
-}
-input{
-    width: 300px;
-    border: none;
-background-color: transparent;
-resize: none;
-outline: none;
-border-bottom:  1px solid black;
-}
-.sel{
-    width: 300px;
-}
-.sell{
-    width: 134px;
-}
-.but{
-    width: 100px;
-}
-.toggle{
-    text-align: right;
+    height: 79px;
+    width: 100%;
 }
 .icon{
-    font-size: 40px;
+    text-align: end;
+    font-size: 20px;
 }
+
+
+.h1{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: cursive;
+    text-shadow: 0.04em 0.04em 0 #fff, 0.08em 0.08em 0 #aaa;
+}
+.input input{
+    border: none;
+    background-color: transparent;
+    border-bottom:  1px solid black;
+    padding: 15px
+}
+button.btn.btn-dark {
+    width: 89px;
+}
+
+
+.form {
+    max-width: 25rem;
+    
+
+  }
+  form.form {
+    background-color: white;
+
+        margin-top: -85px;
+        margin-right: -12px;
+}
+  
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  
+  
+  .formFieldError {
+    border: 1px solid #e11d48;
+  }
+  
+  .formFieldErrorMessage {
+    color: #e11d48;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .formSubmitBtn {
+    padding: 0.5rem 0.7rem;
+    min-width: 5rem;
+    text-transform: uppercase;
+    font-weight: bold
+  }
