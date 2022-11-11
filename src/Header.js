@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import '../src/css/header.css'
-import Dashboard from '../src/Dashboard'
-import Layout from './AdminLayout'
+
 
 
 const Header = (props) => {
   console.log(props)
-  const [show, setShow] = useState(false)
+  const [ setShow] = useState(false)
 
 
   return (
@@ -27,11 +26,11 @@ const Header = (props) => {
               <i class="fa-solid fa-xmark icon" onClick={() => setShow(false)}></i>
             </div>
             :
-            <>
+             <>
             </>
           }
           {
-            <Layoutx/>
+          
         }
 
         </div>

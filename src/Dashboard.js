@@ -38,12 +38,7 @@ const[savedata,setSavedata]=useState()
   setSavedata(form)
     
   }
-  const clickform=()=>{
-    alert("click" )
-    }
-  
-
-  return (
+return (
     <div className="container">
 
     <form className="form input" >
