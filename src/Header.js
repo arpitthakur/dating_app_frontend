@@ -5,7 +5,7 @@ import '../src/css/header.css'
 
 const Header = (props) => {
   console.log(props)
-  const [ setShow] = useState(false)
+const {setShow}= props
 
 
   return (
