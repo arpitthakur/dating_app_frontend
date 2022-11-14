@@ -30,7 +30,7 @@ function Forgotpassword() {
       // }
       // axios(config)
       // .then ((response)=>{
-      //   console.log(response)
+      //   console.log(respon  se)
       // })
       // .catch((e)=>{
       //   console.log(e)

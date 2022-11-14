@@ -16,7 +16,8 @@ const {setShow}= props
         <div class="row ">
           <div class="col-md-3 ">
             <div class="logo">
-              <img src='new.png'></img>
+              <a href='http://localhost:3000/'>        <img className='image' src='new.png'></img></a>
+      
             </div>
           </div>
           {props.profileIcon ?
