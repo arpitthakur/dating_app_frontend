@@ -1,10 +1,32 @@
-body{
-    background-image: url("../bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-     
+.bg_images{
+  background-image: url("../bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 84vh;
    
-}.full{
+
+}
+.image{
+  width: 100%;
+  height: 15vh;
+  object-fit: cover;
+}
+.bg_images3{
+  background-image: url("../dashboard1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2px 0;
+  height: 91vh;
+}
+.bg_images2{
+  background-image: url("../bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 84vh;
+
+
+}
+.full{
   display: flex;
 }
 
@@ -20,28 +42,22 @@ padding: 4px;
 border-bottom: 1px solid black;
 }
 
-@media screen and (max-width: 1024px) {
-    .logo{
-    margin-top: -45px !important;
-    }
-  }
-  @media screen and (max-width: 770px) {
-    .logo{
-    margin-top: -26px !important;
-    }
+/* @media screen and (max-width: 1024px) {
    
+  } */
+    /* @media screen and (max-width: 770px) {
+    
+    
+    } */
+  .clr form{
+    background-color: white;
   }
   @media screen and (max-width: 320px) {
-    .logo{
-    margin-top: -75px !important;
-    }
+ 
     .icon{
         margin-top: -139px !important;
     }
   }
-  .logo{
-    margin-top: -79px;
-}
 
 img{
     height: 100%;
@@ -53,7 +69,7 @@ img.img {
 }
 .head{
     background-color: white;
-    height: 79px;
+    height: 54px;
     width: 100%;
 }
 .icon{
@@ -79,15 +95,15 @@ button.btn.btn-dark {
 
 
 .form {
-    max-width: 25rem;
     
+  width: 100%;
 
   }
-  form.form {
+  .form form {
     background-color: white;
+   
 
-        margin-top: -85px;
-        margin-right: -12px;
+       
 }
   
   

@@ -79,6 +79,8 @@ function Login() {
   return (
     <>
       <Header profileIcon={false} />
+      <div className="bg_images">
+      <form>
         <div className="container">
 
           <div className="form input">
@@ -100,7 +102,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             ></input>
             <button className="btn btn-dark butt" onClick={handleLogin}><b>Log In</b></button>
-<br></br>
+
             <b> <a href="http://localhost:3000/reset">Forgot Password ?</a></b>
             <p><b>Don't have an account ?   <a href="http://localhost:3000/">Sign up</a></b></p>
           </div>
@@ -108,8 +110,7 @@ function Login() {
           </div>
 
 
-        </div>
-        </>
+        </div></form></div></>
   );
 }
 

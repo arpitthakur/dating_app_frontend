@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import '../src/css/header.css'
-import Dashboard from '../src/Dashboard'
+
 
 
 const Header = (props) => {
   console.log(props)
-  const [show, setShow] = useState(false)
+const {setShow}= props
 
 
   return (
@@ -16,7 +16,8 @@ const Header = (props) => {
         <div class="row ">
           <div class="col-md-3 ">
             <div class="logo">
-              <img src='new.png'></img>
+              <a href='http://localhost:3000/'>        <img className='image' src='new.png'></img></a>
+      
             </div>
           </div>
           {props.profileIcon ?
@@ -26,11 +27,12 @@ const Header = (props) => {
               <i class="fa-solid fa-xmark icon" onClick={() => setShow(false)}></i>
             </div>
             :
-            <>
+             <>
             </>
           }
           {
-        show?  <Dashboard/>:null}
+          
+        }
 
         </div>
       </div>
